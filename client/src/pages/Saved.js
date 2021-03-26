@@ -4,6 +4,7 @@ import API from "../utils/API";
 import BookComp from "../components/BookComp";
 import NoResults from "../components/noResults";
 import { Button } from "react-bootstrap";
+import Nav from 'react-bootstrap/Nav'
 
 function Saved() {
   const [books, setBooks] = useState({});
@@ -23,7 +24,7 @@ function Saved() {
   return (
     <div>
       <Header title="Saved Books" />
-      <Button style={{ margin: "20px" }}> <a href="http://localhost:3000" style={{ color: "white" }}>Back to Google Search</a></Button>
+      <Button style={{ margin: "20px" }}><Nav.Link href="http://localhost:3000" style={{ color: "white" }}>Back to Google Search</Nav.Link></Button>
 
       {books.length ? (
         <div>
