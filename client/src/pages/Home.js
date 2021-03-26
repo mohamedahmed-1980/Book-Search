@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import BookCard from "../components/BookComp";
 import NoResults from "../components/noResults";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom"
 
 function Home() {
   const [books, setBooks] = useState({});
@@ -30,7 +31,7 @@ function Home() {
   return (
     <div>
       <Header title="Google Book Search" />
-      <Button style={{ margin: "20px" }}> <a href="http://localhost:3000/Saved" style={{ color: "white" }}>Go to Saved Books</a> </Button>
+      <Button style={{ margin: "20px" }}> <Link href="/saved" style={{ color: "white" }}>Go to Saved Books</Link> </Button>
 
       <input style={{ margin: "20px" }} type="text" placeholder="Search ..." className="form-control" onChange={handleChange} />
       {books.length ? (
